@@ -1,8 +1,13 @@
 """docstring"""
 
 def main():
-    allowed_ips = {
-        "111.111.1.1": "Erfolg"
+    erlaubte_ips = {
+        "111.111.1.1": "erlaubt"
     }
-    print(len(allowed_ips))
-print(main())
+
+    if "111.111.1.1" in erlaubte_ips:
+        print(erlaubte_ips.get('111.111.1.1'))
+    else:
+        print("verweigert")
+
+main()
