@@ -16,5 +16,4 @@ def main():
     else:
         print("Die Firewall von " + ip + " hat die Verbindung geblockt")
 
-eingabe()
 main()
