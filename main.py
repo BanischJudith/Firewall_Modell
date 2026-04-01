@@ -15,7 +15,8 @@ def main():
        Eing_ip wird zu Integer (Variable ip).
        For-Loop: Schaut, ob ip im Umfang im Dictionary ist."""
     ip_dict = {
-        (str_zu_int("192.168.1.0"), str_zu_int("192.168.1.255")): "erlaubt"
+        (str_zu_int("192.168.1.0"), str_zu_int("192.168.1.100")): "placeholder",
+        (str_zu_int("192.168.1.200"), str_zu_int("192.168.1.255")): "placeholder"
     }
 
     eing_ip = eingabe()
@@ -24,8 +25,9 @@ def main():
 
     for (start, ende), wert in ip_dict.items():
         if start <= ip <= ende:
-            print(f"Die Firewall von {eing_ip} hat die Verbindung erlaubt")
-        else:
-            print(f"Die Firewall von {eing_ip} hat die Verbindung geblockt")
+            print(f"Die Firewall von {eing_ip} hat die Verbindung zugelassen")
+            break
+    else:
+        print(f"Die Firewall von {eing_ip} hat die Verbindung geblockt")
 
 main()
