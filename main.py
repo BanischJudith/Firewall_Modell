@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-"""docstring"""
-=======
 import ipaddress
 
 def str_zu_int(str_ip):
@@ -9,7 +6,7 @@ def str_zu_int(str_ip):
 
 def eingabe():
     """Der User gibt die zu testende IP ein. Der eingegebene Input hat die Variable eing_ip."""
-    eing_ip = input("Gib eine IP-Adresse ein: ")
+    eing_ip = input("Gib deine IP-Adresse ein: ")
     return eing_ip
 
 def main():
@@ -18,8 +15,15 @@ def main():
        Eing_ip wird zu Integer (Variable ip).
        For-Loop: Schaut, ob ip im Umfang im Dictionary ist."""
     ip_dict = {
-        (str_zu_int("192.168.1.0"), str_zu_int("192.168.1.100")): "placeholder",
-        (str_zu_int("192.168.1.200"), str_zu_int("192.168.1.255")): "placeholder"
+        (str_zu_int("1.0.0.0"), str_zu_int("9.255.255.255")): "placeholder",
+        (str_zu_int("11.0.0.0"), str_zu_int("126.255.255.255")): "placeholder",
+        (str_zu_int("129.0.0.0"), str_zu_int("169.253.255.255")): "placeholder",
+        (str_zu_int("169.255.0.0"), str_zu_int("172.15.255.255")): "placeholder",
+        (str_zu_int("172.32.0.0"), str_zu_int("191.0.1.255")): "placeholder",
+        (str_zu_int("192.0.3.0"), str_zu_int("192.88.98.255")): "placeholder",
+        (str_zu_int("192.88.100.0"), str_zu_int("192.167.255.255")): "placeholder",
+        (str_zu_int("192.169.0.0"), str_zu_int("198.17.255.255")): "placeholder",
+        (str_zu_int("198.20.0.0"), str_zu_int("223.255.255.255")): "placeholder"        
     }
 
     eing_ip = eingabe()
@@ -28,10 +32,9 @@ def main():
 
     for (start, ende), wert in ip_dict.items():
         if start <= ip <= ende:
-            print(f"Die Firewall von {eing_ip} hat die Verbindung zugelassen")
+            print(f"Die Firewall hat die Verbindung mit deiner IP-Adresse {eing_ip} zugelassen.")
             break
     else:
-        print(f"Die Firewall von {eing_ip} hat die Verbindung geblockt")
+        print(f"Die Firewall hat die Verbindung mit deiner IP-Adresse {eing_ip} verhindert.")
 
 main()
->>>>>>> test
