@@ -17,7 +17,7 @@ def main():
        (4) For-Loop: Schaut, ob ip im Umfang im Dictionary ist."""
     ip_dict = {
         (str_zu_int("1.0.0.0"), str_zu_int("9.255.255.255")): {
-          "80": "test-port"  
+          "80", "70"
         },
         (str_zu_int("11.0.0.0"), str_zu_int("126.255.255.255")): "placeholder",
         (str_zu_int("129.0.0.0"), str_zu_int("169.253.255.255")): "placeholder",
