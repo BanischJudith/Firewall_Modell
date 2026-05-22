@@ -32,7 +32,7 @@
         <span>&#x2B9E;&#x2B9E;&#x2B9E;</span> 
     </div>
     <div class="server">
-        <img src="/bilder/server_icon.png" width="80px"/>
+        <img src="{{ url_for('static', filename='server_icon.png') }}" width="80px"/>
     </div>
     <div id="erfolg">
         <span>Erfolg!<br> 
@@ -44,6 +44,6 @@
     </div>
 </div> 
 
-<script src="script.js"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
