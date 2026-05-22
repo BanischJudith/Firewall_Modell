@@ -1,0 +1,97 @@
+:root {
+    --bg: #1B1B1B;
+    --text: #BABABA;
+    --leitfarbe: #4b88a9;
+    --akzentfarbe: #AFCBDB;
+    --erfolg: #92FDB2;
+    --fehler: #FA7676;
+}
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    text-align: center;
+    font-family: "Oxanium", sans-serif;
+}
+h1 {
+    color: var(--leitfarbe)
+}
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.text {
+    margin: 2% 25% 0% 25%;
+    text-align: justify;
+
+}
+.input {
+    display: inline-block;
+    text-align: left;
+}
+.input [type=text] {
+    background-color: var(--akzentfarbe);
+    color: color-mix(in srgb, var(--leitfarbe) 80%, black 20%);
+    font-size: 17px;
+    border: none;
+    border-radius: 3px;
+    padding: 7px;
+}
+.button {
+    display: inline-block;
+}
+button {
+    background-color: var(--leitfarbe);
+    color: var(--erfolg);
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 3px;
+    font-family: "Oxanium", sans-serif;
+    border: solid 3px var(--erfolg);
+    padding: 9px;
+    margin-left: 10px;
+    
+}
+button:hover {
+   cursor: pointer; 
+   transform: scale(1.03);
+   background: color-mix(in srgb, var(--leitfarbe) 70%, black 30%);
+   border-color: var(--erfolg);
+}
+button:active{
+  transform: scale(.98);
+}
+.arrow {
+    display: inline-block;
+    margin: 0px 20px 0px 20px;
+}
+.server {
+    display: inline-block;
+    position: relative;
+    top: 30px;
+    padding: 7px 7px 1px 7px;
+    background-color: var(--akzentfarbe);
+    border-radius: 5px;
+}
+#eingabe {
+    text-align: center;
+    border: 4px solid var(--leitfarbe);
+    border-radius: 12px;
+    margin: 5% 15% 0% 15%;
+    padding: 30px 80px 80px 80px;
+    font-size: 23px;
+}
+#ip {
+    text-align: left;
+}
+#server-ip {
+    margin-right: 4px;
+}
+#erfolg {
+    display: none;
+    margin-top: 50px;
+    color: var(--erfolg);
+}
+#fehler {
+    display: none;
+    margin-top: 50px;
+    color: var(--fehler);
+}
