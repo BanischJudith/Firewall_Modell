@@ -76,7 +76,7 @@ button:active{
     border: 4px solid var(--leitfarbe);
     border-radius: 12px;
     margin: 5% 15% 0% 15%;
-    padding: 30px 80px 80px 80px;
+    padding: 65px 80px 80px 80px;
     font-size: 23px;
 }
 #ip {
