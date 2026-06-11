@@ -22,7 +22,7 @@ def check_firewall(eing_ip, eing_port):
         (str_zu_int("198.20.0.0"), str_zu_int("198.168.0.255")): {"80", "443", "53", "67", "68"},
         (str_zu_int("198.168.1.0"), str_zu_int("198.168.1.255")): {"80", "443", "53", "67", "68"},
         (str_zu_int("172.16.0.3"), str_zu_int("172.16.0.225")): {"80", "443", "445", "139", "53", "67", "68"},
-        (str_zu_int("172.16.0.0"), str_zu_int("172.16.0.3")): {"80", "443", "445", "139", "22", "3389", "53", "67", "68"},
+        (str_zu_int("172.16.0.0"), str_zu_int("172.16.0.2")): {"80", "443", "445", "139", "22", "3389", "53", "67", "68"},
         (str_zu_int("198.168.2.0"), str_zu_int("223.255.255.255")): {"80", "443", "53", "67", "68"},
     }
 
@@ -110,7 +110,7 @@ def check():
     try:
         result = check_firewall(ip, port)
     except ValueError:
-        return jsonify({"error": "Ungültige IP-Adresse."}), 400
+        return jsonify({"error": "Ungültiger Port oder IP-Adresse."}), 400
 
     return jsonify(result)
 
